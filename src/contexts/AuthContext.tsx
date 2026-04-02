@@ -154,7 +154,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       setUser(response.data.user);
       setOrganizations(response.data.organizations || []);
     } catch (err: any) {
-      // Instead of storing the error, throw it to be handled by the component
       throw err;
     } finally {
       setLoading(false);
