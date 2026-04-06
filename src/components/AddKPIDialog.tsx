@@ -562,7 +562,6 @@ export function AddKpiDialog({
   };
 
   const validateForm = useCallback(() => {
-    // debugger
     const errors: Record<string, string> = {};
     if (!formData.name.trim()) {
       errors.name = "KPI Name is required";
@@ -637,18 +636,14 @@ export function AddKpiDialog({
   }, [formData, assign, teamData]);
 
   const prepareFormDataForSubmission = () => {
-    // console.log(formData.breakdownData);
-    
-    // debugger
+    // console.log(formData.breakdownData);    
     const preparedData = { ...formData };
 
     if (preparedData.targetValue) {
       const floatValue = Number.parseFloat(preparedData.targetValue);
       preparedData.targetValue = Math.round(floatValue);
     }
-
-      preparedData.remainingContribution = remainingContribution.toFixed(0);
-    
+    preparedData.remainingContribution = remainingContribution.toFixed(0);
 
     if (!preparedData.breakdown) {
       preparedData.breakdown = {};
@@ -691,7 +686,6 @@ export function AddKpiDialog({
 
   // Handle form submission
   const handleSubmit = async () => {
-    // debugger
     setIsSubmitting(true);
     setValidationErrors({});
 

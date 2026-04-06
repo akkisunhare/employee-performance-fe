@@ -182,7 +182,6 @@ const KPIs = () => {
   };
 
   const handleCreateKpi = (formData: any) => {
-    // debugger
     if (userCheck.isUserEdit && formData.divisionType == 'standalone') {
     // if (userCheck.isUserEdit) {
       formData.breakdownData = formData.breakdownData?.map((interval) => ({
