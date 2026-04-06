@@ -45,7 +45,6 @@ export const weeks = [
   const status = weekData?.status || "";
   
   const colorMap: Record<PriorityStatus, string> = {
-
     'Not yet started': 'bg-red-500',
     'On track': 'bg-green-500',
     'Behind schedule': 'bg-[#FFA202F2]',

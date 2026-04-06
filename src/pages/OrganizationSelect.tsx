@@ -85,7 +85,7 @@ export default function OrganizationSelect() {
   if (loading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center text-white">
-        Loading...
+        Loading.....
       </div>
     );
   }

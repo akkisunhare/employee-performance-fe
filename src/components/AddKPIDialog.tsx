@@ -245,7 +245,7 @@ export function AddKpiDialog({
     }
 
     const [_, quarterNumStr, yearStr] = match;
-    console.log(quarterNumStr);
+    // console.log(quarterNumStr);
     try {
       const response: any = await QuarterService.getCurrentYearQuaters(yearStr);
       if (response.data) {
